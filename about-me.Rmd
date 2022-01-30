@@ -1,114 +1,213 @@
 ---
 title: "About Me"
-author: "Insert Name Here"
+author: "Zoe Erkenbeck"
 output:
-  html_document:
+  pdf_document:
     toc: yes
   word_document:
     toc: yes
-  pdf_document:
+  html_document:
     toc: yes
 bibliography: references.bib
 ---
 
 # Who I am and where I came from
 
-First off, replace "Insert Name Here" in the YAML header with your name.
-It has to be surrounded by double quotation marks. 
-Briefly tell us a little background about yourself, and how
-you ended up becoming a student at CSU and taking this class.
-Put in a hypertext link to your undergraduate institution.  
 
-Include a numbered list of your top-four favorite leisure activities, like this:
+I grew up in a small town called Cricklade in the South West of England and moved to Colorado in 2016. I've always been interested in Biology as I grew up on nature documentaries and Cricklade has a Site of Special Scientific Interest (SSSI) that I used to spend a lot of time in called North Meadow. It is a traditionally managed lowland hay meadow and has the largest population (80%) of *Fritillaria meleagris* (snake's-head fritillary) in Britain. 
 
-1. My favorite
-1. Second favorite
-1. third favorite
-1. fourth favorite
+```{r meadow, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/northmeadow.jpg", auto_pdf = TRUE)
+```
 
+I did my undergrautate degree in Biological Sciences at the [University of the West of England](https://www.uwe.ac.uk/) in Bristol, UK and became increasingly interested in genetics of species of conservation concern, culminating in a final project studying genetic markers for use in conservation in *Malacochersus tornieri* (Pancake tortoise).
 
-Include a picture (jpg or png) of yourself, to get some practice in inserting
-images into RMarkdown. See the example to see how that can be done.
-Note that JPEGs that include EXIF information might be incorrectly rotated.
-That is OK if you can't figure out how to fix it.
+After a few years of work including as a Temporary nutritionist at Denver Zoo and an Animal Care tech at Anschutz I decided to persue a Master's degree to continue with my interest in wildlife genetics and get back into research. I also became a bit of a bird nerd joining Denver and Colorado Field Ornithologists groups so decided to focus my master work on an avian species of conservation concern across its range.
 
+I'm a second year Master's student in Dr. Mike Wunder's lab at CU Denver and am co-advised by Dr. Sara Oyler-McCance at the USGS in Fort Collins. My thesis is focused on comparative genomics of *Charadrius montanus* (Mountain plover), a migratory (not exactly) shorebird. I have my de novo genome assembly (the first whole genome sequence for the species) and plan to use it for comparative genomics with other plover species and a population study comparing migratory breeding populations from the US (such as SouthPark,CO), possibly with a resident breeding population in Nuevo Leon, MX if I can get the samples though from Mexico in time. Permitting has been an interesting process..
 
+When I'm not in school I enjoy:
+1. Fencing épée (make new friends and then stab them)
+2. Travelling, hiking and exploring new areas with my husband
+3. Taking care of my fish, my honey gourami Tiberius and grumpy betta Groucho
+4. Planting and growing things - my favorite houseplants and my Pachypodiums and I'm planning out a predominantly native wildlife garden
 
+Here's a picture of me with my study species at Chico Basin Ranch and me and my husband exploring in Grand Teton NP.
 
+```{r me_pic, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/zoeplover.jpg", auto_pdf = TRUE)
+```
+
+```{r tetons, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/erkenbecksteton.jpg", auto_pdf = TRUE)
+```
+JPEGs that include EXIF information might be incorrectly rotated - this happened. Resaved after rotating in a seperate program to fix but sure there is a better way.
 
 # Research Interests
 
-Brief description of your research interests.
+I'm interested in conservation genomics, particularly of species of concern and with my latest project have been getting down a rabbit hole of thinking about genetics in relation to migratory behavior and how genomics could influence conservation decisions. Working with non-model species presents an interesting research challenge.
 
 ## Influential papers
 
-Describe two papers that have been very influential in your
-research.  The main purpose of this is learning how to
-cite literature in RMarkdown.  You will have to add the citations
-to `references.bib` in BibTeX format, and then also cite them.
+When I first started thinking about migratory behavioral difference as a possible avenue for comparative work the review paper @MerlinandLiedvogel2019 was a big jumping off point to getting back to the foundational papers and considering differences between taxa. I have written my own review that I hope to get to publication soon with a bird exclusive slant: Considering genetic associations and other possible basis of migration – From the perspective of Aves.
 
-An easy way to get the paper in BibTeX format is to find it on
-Google Scholar.  Then, under the paper's link, click on the big 
-fat quotation marks, and then choose the BibTex link at the bottom
-of the page.  Then copy the contents into `references.bib`.  For example
-you might paste this into `references.bib`.
-```
-@article{richardson1997bayesian,
-  title={On Bayesian analysis of mixtures with an unknown number of components (with discussion)},
-  author={Richardson, Sylvia and Green, Peter J},
-  journal={Journal of the Royal Statistical Society: series B (statistical methodology)},
-  volume={59},
-  number={4},
-  pages={731--792},
-  year={1997},
-  publisher={Wiley Online Library}
-}
-```
-Note the string before the comma on the first line.  That is the cite key.
-Once you have done that, you can cite it by including `@richardson1997bayesian`
-if you don't want the name in parenthesis, like, "As @richardson1997bayesian introduced in
-their landmark paper."  On the other hand, you can use `[@richardson1997bayesian]` if
-you do want it all in parentheses, like, "Reversible jump MCMC has been previously applied
-to the analysis of mixtures [@richardson1997bayesian]."
+@Barnhill-DillingandDelborne2021 and the whole special issue the article belongs to in Conservation Science and Practice really got me thinking about the place of genomics in conservation and the future of conservation projects. I have a second review in progress based around the ideas from the issue: The current role of genetics and genomics in conservation: benefits, challenges to implementation and integration into standard practice and what actions could help.  
 
 
 ## The mathematics behind my research
 
-It is easy to write complex mathematics using a mathematical typesetting
-engine called TeX.  Write two displayed equations that are relevant
-to your work.  For a quick primer on TeX and LaTeX you can
-download [this cheatsheet](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
-and then fiddle with including things between the double dollar signs below:
+Basic starting point for effective population size
 $$
-\cos\theta + i\sin\theta = e^{i\theta}
+N_e= \frac{4N}{2+S_k^2}
 $$
-or here:
+
+
+FST- proportion of the total genetic variance contained in a subpopulation relative to the total genetic variance
 $$
-\lim_{n\rightarrow \infty} \frac{1}{n}\sum_{i=1}^n X_i = EX
+F_{st}= \frac{H_t-H_s}{H_t}
+$$
+$$
+H= 1-\Sigma {p_i}^2
 $$
 
 ## My computing experience
 
-Describe any experience you have with any programming languages.
-Include a snippet of code in two different languages using a
-non-evaluated code block.  This can be something you have previously
-written, or, if you don't have any, then find and copy a few lines of code
-off the web.
+I had no programming experience until graduate school. 
+
+My first experience was a class in Biological Data Analysis which used R. This was a lab for thinking about model selection using the University of California Berkeley admissions dataset 
+
+```R
+require(AICcmodavg)
+ucb <- as.data.frame(UCBAdmissions)
+ucb <- tidyr::spread(ucb, Admit, Freq) # use Hadley's excellent tidyr to reshape
+ucb[order(ucb$Dept), ]
+f1 <- glm(cbind(Admitted, Rejected) ~ Gender, ucb, family='binomial')
+f2 <- glm(cbind(Admitted, Rejected) ~ Dept, ucb, family = 'binomial')
+f3 <- glm(cbind(Admitted, Rejected) ~ Dept + Gender, ucb, family = 'binomial')
+f4 <- glm(cbind(Admitted, Rejected) ~ Dept * Gender, ucb, family = 'binomial')
+glm.list <- list(f1,f2,f3,f4)
+glm.names <- as.character(unlist(lapply(glm.list,formula)))
+(glm.results <- aictab(glm.list,modnames=glm.names))
+
+exp(-0.5*glm.results$Delta_AICc[4])/sum(exp(-0.5*glm.results$Delta_AICc))
+
+1/exp(-0.5*glm.results$Delta_AICc[4])/sum(exp(-0.5*glm.results$Delta_AICc))
+summary(f1)
+summary(f2)
+summary(f3)
+summary(f4)
+
+```
+
+I've been learning to work on a Linux machine (my computer is caller Pepper, it runs mint) and bash script to run programs on summit. This is for running cactus although I'm still having some issues with the program timing out with the walltime so I don't have alignment results yet
+
+```sh
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=22
+#SBATCH --time=168:00:00
+#SBATCH --partition=shas
+#SBATCH --qos=long
+#SBATCH --mail-type=end
+#SBATCH --mail-user=zoe.erkenbeck@cuanschutz.edu
+#SBATCH --output=cactus_plovers.out
+
+module purge
+
+module load singularity/3.6.4
+
+#Scripting here
+SCRATCH_DIR=/scratch/summit/zazzy\@xsede.org
+PROJECTS_DIR=/projects/zazzy\@xsede.org
+
+JOB_STORE=/scratch/summit/zazzy\@xsede.org/jobstore$$
+WORK_DIR=/scratch/summit/zazzy\@xsede.org/cactusWorkDir
+
+export XDG_RUNTIME_DIR=$SCRATCH_DIR/
+export SINGULARITY_CACHEDIR=$SCRATCH_DIR/.singularity
+export SINGULARITY_TMPDIR=$SCRATCH_DIR/.singularity
+
+rm -rf $JOB_STORE
+rm -rf $WORK_DIR
+
+#mkdir -p $JOB_STORE
+mkdir -p $WORK_DIR
+
+singularity pull --dir $SINGULARITY_CACHEDIR docker://quay.io/comparative-genomics-toolkit/cactus:v2.0.4
+singularity run -B $PROJECTS_DIR:$PROJECTS_DIR,$WORK_DIR:$WORK_DIR,$SCRATCH_DIR:$SCRATCH_DIR --env TMPDIR=$WORK_DIR docker://quay.io/comparative-genomics-toolkit/cactus:v2.0.4 cactus $SCRATCH_DIR/jobstore$$ $PROJECTS_DIR/charadriidae_seq$
+
+module purge
+
+```
 
 ## What I hope to get out of this class
 
-Give me a bullet list of three things:
+I hope to:
 
-* This
-* That
-* Another
+* Have a better idea of the workflow for the bioinformatics programs I will use for my thesis
+* Meet like-minded people working on similar problems and learn about their research
+* Make more progress than trying to figure out how to do analysis on my own
 
 # Evaluating some R code
 
-Here, please evaluate some R code to make a plot or a figure.
-The goal here is just to realize that you can imbed R code
-within fenced code blocks and get the output rendered into
-the document.
+This is a range map for Mountain Plover showing the breeding range in yellow, wintering range in blue and migration period range in green. I'm still working on playing with mapping in R and my sites may change but this base can be updated for use later
 
-# Citations
+```{R}
+library(ggplot2)
+library(ggspatial)
+library(maptools)
+library(mapdata)
+library(rgdal)
+library(maps)
+library(sf)
+library(rgdal)
 
+MOPLpath <- "./shapefiles/Charadrius_montanus.shp"
+
+MOPLplot <- readOGR(MOPLpath)
+MOPLdf <- fortify (MOPLplot)
+MOPLdf$group <- factor(MOPLdf$group,levels = c("2.1","2.2","2.3","2.4","1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.8","0.1","0.2","0.3","0.4","0.5"))
+MOPLdf$fill <- 2
+MOPLdf[MOPLdf$group == '0.1'|MOPLdf$group == '0.2'|MOPLdf$group == '0.3'|MOPLdf$group == '0.4'|MOPLdf$group == '0.5',]$fill <- rgb(255,204,51,max=255,alpha=200) #7 yellow
+MOPLdf[MOPLdf$group == '1.1'|MOPLdf$group == '1.2'|MOPLdf$group == '1.3'|MOPLdf$group == '1.4'|MOPLdf$group == '1.5'|MOPLdf$group == '1.6'|MOPLdf$group == '1.7'|MOPLdf$group == '1.8',]$fill <- rgb(51,167,255,max=255,alpha=200) #4 blue
+MOPLdf[MOPLdf$group == '2.1'|MOPLdf$group == '2.2'|MOPLdf$group == '2.3'|MOPLdf$group == '2.4',]$fill <- rgb(105,228,23,max=255,alpha=200) #3 green
+
+(sites <- data.frame(longitude = c(-100.9536431, -103.5646914, -104.3386891, -105.8656448, -107.760596),
+                     latitude = c(26.3780515, 37.6552239, 38.3679908, 39.2060909, 47.971252)))
+
+usa <- map_data("usa")
+states <- map_data("state")
+mexico <- map_data("worldHires" , "Mexico")
+
+NAmap <- ggplot() + geom_polygon(data = usa, 
+                                  aes(x=long, y = lat, group = group), 
+                                 fill = "white", 
+                                 color="black") + 
+  geom_polygon(data = states, 
+               aes(x=long, y = lat, group = group), 
+               fill = "white", 
+               color="black") +
+  geom_polygon(data = mexico, 
+               aes(x=long, y = lat, group = group), 
+               fill = "white", 
+               color="black") + 
+  
+  geom_polygon(data = MOPLdf,
+               aes(x=long,y=lat,group= group),
+             fill= MOPLdf$fill,
+             color="gray") +
+  geom_point(data = sites, aes(x = longitude, y = latitude), size = 3, 
+             shape = 23, fill = "darkred")+
+ # annotation_scale(location = "bl", width_hint = 0.4) +
+  annotation_north_arrow(location = "bl", which_north = "true", 
+                         pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
+                         style = north_arrow_fancy_orienteering) +
+xlab("Longitude") + ylab("Latitude") +
+  ggtitle("MOPL Range and Sample Sites", subtitle = "(5 sampling sites within the breeding range)") +
+            theme(panel.grid.major = element_line(color = gray(0.5),
+                                                  size = 0.5), panel.background = element_rect(fill = "aliceblue"))
+NAmap
+```
+
+# References
